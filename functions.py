@@ -1,7 +1,4 @@
 # Functions & Fibonacci Sequence
-# Question
-# Write a Python program to generate the Fibonacci sequence up to a specified term n. The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
-#We have provided  you with in-complete code, from the Knowledge learned from week 1 to week 3 please complete the missing parts to achieve the goal of the question.
 def fibonacci(n):
   """
   This function generates the Fibonacci sequence up to a specified term n using iteration.
@@ -13,13 +10,14 @@ def fibonacci(n):
       A list containing the Fibonacci sequence up to n terms.
   """
   if n <= 1:
-    # Complete here
+    return 1
   else:
-    a, b = # complete here
+    a, b = 1, 1
     for _ in range(2, n + 1):
       c = a + b
-      # Complete here
-    return # add the variable to be returned
+      a = b
+      b = c
+    return c + a + b
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
